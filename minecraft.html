@@ -44,6 +44,7 @@
             'float': 'float 6s ease-in-out infinite',
             'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             'gradient-x': 'gradient-x 8s ease infinite',
+            'promo-pulse': 'promo-pulse 2s ease-in-out infinite',
           },
           keyframes: {
             float: {
@@ -53,6 +54,10 @@
             'gradient-x': {
               '0%, 100%': { 'background-position': '0% 50%' },
               '50%': { 'background-position': '100% 50%' },
+            },
+            'promo-pulse': {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.05)', opacity: '0.9' },
             },
           },
         }
@@ -117,7 +122,7 @@
       transition: all 0.3s;
       border: 1px solid #262626;
       position: relative;
-      overflow: hidden;
+      overflow: visible; /* Alterado para visible para evitar corte do badge */
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
@@ -172,6 +177,24 @@
 
     .btn-primary:hover::after {
       opacity: 1;
+    }
+
+    /* Estilo do badge promocional */
+    .promo-badge {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background: linear-gradient(45deg, #facc15, #f97316);
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+      animation: promo-pulse 2s ease-in-out infinite;
+      transform: rotate(15deg);
     }
 
     /* Efeito de gradiente animado */
@@ -345,12 +368,13 @@
           Planos de <span class="gradient-text">Hospedagem de Minecraft</span>
         </h2>
         <p class="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base" data-animate="fade-down">
-          Escolha o plano ideal para sua comunidade com AMD Ryzen 9 e baixa latência.
+          PROMOÇÃO EXCLUSIVA: Apenas R$4 por GB de RAM! Escolha o plano ideal para sua comunidade com AMD Ryzen 9 e baixa latência.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" data-animate="fade-up">
-        <div class="card p-6 text-center">
+        <div class="card p-6 text-center relative">
+          <div class="promo-badge">PROMOÇÃO</div>
           <div class="w-16 h-16 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-6 mx-auto">
             <i class='bx bx-cube text-3xl'></i>
           </div>
@@ -358,10 +382,11 @@
           <p class="text-gray-400 text-sm sm:text-base mb-2">2 GB RAM</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">4 vCore AMD Ryzen 9</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">5 GB NVMe</p>
-          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 16,90/mês</p>
+          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 8,00/mês</p>
           <a href="https://redebots.shop/index.php?rp=/store/minecraft-pro-br/minecraft-basico" class="btn-primary"><span class="relative z-10">Contratar</span></a>
         </div>
-        <div class="card p-6 text-center">
+        <div class="card p-6 text-center relative">
+          <div class="promo-badge">PROMOÇÃO</div>
           <div class="w-16 h-16 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-6 mx-auto">
             <i class='bx bx-cube text-3xl'></i>
           </div>
@@ -369,10 +394,11 @@
           <p class="text-gray-400 text-sm sm:text-base mb-2">4 GB RAM</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">4 vCore AMD Ryzen 9</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">5 GB NVMe</p>
-          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 33,80/mês</p>
+          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 16,00/mês</p>
           <a href="https://redebots.shop/index.php?rp=/store/minecraft-pro-br/minecraft-intermediario" class="btn-primary"><span class="relative z-10">Contratar</span></a>
         </div>
-        <div class="card p-6 text-center">
+        <div class="card p-6 text-center relative">
+          <div class="promo-badge">PROMOÇÃO</div>
           <div class="w-16 h-16 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-6 mx-auto">
             <i class='bx bx-cube text-3xl'></i>
           </div>
@@ -380,10 +406,11 @@
           <p class="text-gray-400 text-sm sm:text-base mb-2">8 GB RAM</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">4 vCore AMD Ryzen 9</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">5 GB NVMe</p>
-          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 67,60/mês</p>
+          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 32,00/mês</p>
           <a href="#" class="btn-primary"><span class="relative z-10">Contratar</span></a>
         </div>
-        <div class="card p-6 text-center">
+        <div class="card p-6 text-center relative">
+          <div class="promo-badge">PROMOÇÃO</div>
           <div class="w-16 h-16 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-6 mx-auto">
             <i class='bx bx-cube text-3xl'></i>
           </div>
@@ -391,10 +418,11 @@
           <p class="text-gray-400 text-sm sm:text-base mb-2">12 GB RAM</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">6 vCore AMD Ryzen 9</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">10 GB NVMe</p>
-          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 101,40/mês</p>
+          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 48,00/mês</p>
           <a href="https://redebots.shop/index.php?rp=/store/minecraft-pro-br/minecraft-pro" class="btn-primary"><span class="relative z-10">Contratar</span></a>
         </div>
-        <div class="card p-6 text-center">
+        <div class="card p-6 text-center relative">
+          <div class="promo-badge">PROMOÇÃO</div>
           <div class="w-16 h-16 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-6 mx-auto">
             <i class='bx bx-cube text-3xl'></i>
           </div>
@@ -402,10 +430,11 @@
           <p class="text-gray-400 text-sm sm:text-base mb-2">16 GB RAM</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">8 vCore AMD Ryzen 9</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">10 GB NVMe</p>
-          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 135,20/mês</p>
+          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 64,00/mês</p>
           <a href="https://redebots.shop/index.php?rp=/store/minecraft-pro-br/minecraft-elite" class="btn-primary"><span class="relative z-10">Contratar</span></a>
         </div>
-        <div class="card p-6 text-center">
+        <div class="card p-6 text-center relative">
+          <div class="promo-badge">PROMOÇÃO</div>
           <div class="w-16 h-16 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-6 mx-auto">
             <i class='bx bx-cube text-3xl'></i>
           </div>
@@ -413,7 +442,7 @@
           <p class="text-gray-400 text-sm sm:text-base mb-2">24 GB RAM</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">10 vCore AMD Ryzen 9</p>
           <p class="text-gray-400 text-sm sm:text-base mb-2">10 GB NVMe</p>
-          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 202,80/mês</p>
+          <p class="text-xl sm:text-2xl font-bold text-white mb-4">R$ 96,00/mês</p>
           <a href="https://redebots.shop/index.php?rp=/store/minecraft-pro-br/minecraft-ultra" class="btn-primary"><span class="relative z-10">Contratar</span></a>
         </div>
       </div>
@@ -579,10 +608,12 @@
         <div>
           <h3 class="text-lg font-semibold text-white mb-6">Links Rápidos</h3>
           <ul class="space-y-3">
-            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>            <li><a href="vps.html" class="text-gray-400 hover:text-white transition-colors duration-300">VPS Gamer</a></li>
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+            <li><a href="vps.html" class="text-gray-400 hover:text-white transition-colors duration-300">VPS Gamer</a></li>
             <li><a href="dedicados.html" class="text-gray-400 hover:text-white transition-colors duration-300">Servidores Dedicados</a></li>
-            <li><a href="minecraft.html" class="text-gray-400 hover:text-white transition-colors duration-300">Host de Minecraft</a></a>
-            <li><a href="discord_bots.html" class="text-gray-400 hover:text-white transition-colors duration-300">Host de Discord Bots</a></li>          </ul>
+            <li><a href="minecraft.html" class="text-gray-400 hover:text-white transition-colors duration-300">Host de Minecraft</a></li>
+            <li><a href="discord_bots.html" class="text-gray-400 hover:text-white transition-colors duration-300">Host de Discord Bots</a></li>
+          </ul>
         </div>
 
         <!-- Suporte -->
@@ -641,7 +672,7 @@
           <div class="w-8 h-8 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 mr-3">
             <i class='bx bx-bot'></i>
           </div>
-          <div class="bg-dark-700 rounded-lg py-2 px-4 py-2 text-sm text-gray-300 max-w-[80%]">
+          <div class="bg-dark-700 rounded-lg py-2 px-4 text-sm text-gray-300 max-w-[80%]">
             Olá! Sou o assistente virtual da Rede Gamer. Como posso te ajudar hoje?
           </div>
         </div>
@@ -742,6 +773,4 @@
     });
   </script>
 </body>
-
 </html>
-
