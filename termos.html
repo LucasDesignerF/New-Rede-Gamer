@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Serviço - Rede Gamer</title>
+  <meta name="description" content="Termos de Serviço da Rede Gamer, incluindo Termos e Condições, Política de Privacidade e Política de Uso Aceitável, em conformidade com a LGPD.">
+  <meta name="keywords" content="termos de serviço, Rede Gamer, LGPD, privacidade, uso aceitável, VPS gamer, servidores dedicados, host de Minecraft, host de Discord bots">
+  <meta name="author" content="Rede Gamer Team">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Termos de Serviço - Rede Gamer">
+  <meta property="og:description" content="Conheça os Termos de Serviço completos da Rede Gamer, abrangendo condições, privacidade e uso aceitável dos serviços de hospedagem gamer.">
+  <meta property="og:url" content="https://www.redegamer.com.br/termos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://i.imgur.com/1u7iCmD.png">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/1u7iCmD.png">
+  
+  <!-- Fontes e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              400: '#a855f7',
+              500: '#9333ea',
+              600: '#7e22ce',
+            },
+            dark: {
+              900: '#0a0a0a',
+              800: '#1a1a1a',
+              700: '#262626',
+            },
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            heading: ['Orbitron', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'gradient-x': 'gradient-x 8s ease infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            'gradient-x': {
+              '0%, 100%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    :root {
+      --color-primary: 168, 85, 247;
+    }
+    
+    body {
+      background-color: #0a0a0a;
+      color: #e5e7eb;
+      font-family: 'Poppins', sans-serif;
+      background-image: radial-gradient(circle at 25% 25%, rgba(30, 30, 30, 0.9) 0%, rgba(10, 10, 10, 1) 100%);
+      min-height: 100vh;
+    }
+    
+    /* Efeito de partículas */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+    @media (max-width: 640px) {
+      #particles-js {
+        display: none;
+      }
+    }
+    
+    /* Navbar moderna */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+      padding: 1rem;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+      transition: all 0.3s;
+    }
+    
+    .navbar.scrolled {
+      padding: 0.75rem;
+      background: rgba(10, 10, 10, 0.95);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Cards interativos */
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      border: 1px solid #262626;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+    }
+    
+    .card:hover {
+      border-color: #9333ea;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(168, 85, 247, 0.2);
+    }
+    
+    .card:hover::before {
+      opacity: 1;
+    }
+    
+    /* Botão moderno */
+    .btn-primary {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      color: #ffffff;
+      background: linear-gradient(45deg, #7e22ce, #a855f7);
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+      transition: all 0.3s;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+    }
+    
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      background: linear-gradient(45deg, #a855f7, #7e22ce);
+    }
+    
+    .btn-primary:hover::after {
+      opacity: 1;
+    }
+    
+    /* Efeito de gradiente animado */
+    .gradient-text {
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(90deg, #a855f7, #ec4899);
+      background-size: 200% auto;
+      animation: gradient-x 5s ease infinite;
+    }
+    
+    /* Animação de entrada */
+    [data-animate] {
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+    
+    [data-animate="fade-up"] {
+      transform: translateY(20px);
+    }
+    
+    [data-animate].animate {
+      opacity: 1;
+      transform: translate(0);
+    }
+    
+    /* Efeito de vidro */
+    .glass {
+      background: rgba(26, 26, 26, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(168, 85, 247, 0.1);
+    }
+    
+    /* Tabs */
+    .tab-btn {
+      background: #1a1a1a;
+      color: #e5e7eb;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #262626;
+    }
+    
+    .tab-btn:hover, .tab-btn.active {
+      background: #9333ea;
+      color: #ffffff;
+      border-color: #9333ea;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    }
+    
+    .content-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    
+    .content-grid.active {
+      display: grid;
+    }
+    
+    .card-icon {
+      color: #9333ea;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .card-number {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #9333ea;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .card-content {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Efeito de partículas -->
+  <div id="particles-js"></div>
+  
+  <!-- Navbar moderna -->
+  <nav id="navbar" class="navbar">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2 group">
+          <img src="https://i.imgur.com/1u7iCmD.png" alt="Rede Gamer Logo" class="h-10 w-10 transition-transform duration-300 group-hover:scale-110">
+          <span class="text-xl font-bold text-white font-heading">REDE GAMER</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-300 hover:text-primary-400 transition-colors duration-300 relative group">
+            Home
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="vps.html" class="text-gray-300 hover:text-primary-400 transition-colors duration-300 relative group">
+            VPS Gamer
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="dedicados.html" class="text-gray-300 hover:text-primary-400 transition-colors duration-300 relative group">
+            Servidores Dedicados
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="minecraft.html" class="text-gray-300 hover:text-primary-400 transition-colors duration-300 relative group">
+            Host de Minecraft
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="discord_bots.html" class="text-gray-300 hover:text-primary-400 transition-colors duration-300 relative group">
+            Host de Discord Bots
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="https://redebots.shop/index.php?rp=/login" class="btn-primary">
+            <span class="relative z-10">Área do Cliente</span>
+          </a>
+        </div>
+        
+        <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Abrir menu mobile">
+          <i class='bx bx-menu text-3xl' id="menu-icon"></i>
+        </button>
+      </div>
+      
+      <div id="mobile-menu" class="md:hidden mt-4 hidden">
+        <div class="flex flex-col space-y-3 py-4 glass rounded-lg">
+          <a href="index.html" class="px-4 py-2 text-gray-300 hover:text-primary-400 hover:bg-dark-700 rounded transition-colors duration-300">Home</a>
+          <a href="vps.html" class="px-4 py-2 text-gray-300 hover:text-primary-400 hover:bg-dark-700 rounded transition-colors duration-300">VPS Gamer</a>
+          <a href="dedicados.html" class="px-4 py-2 text-gray-300 hover:text-primary-400 hover:bg-dark-700 rounded transition-colors duration-300">Servidores Dedicados</a>
+          <a href="minecraft.html" class="px-4 py-2 text-gray-300 hover:text-primary-400 hover:bg-dark-700 rounded transition-colors duration-300">Host de Minecraft</a>
+          <a href="discord_bots.html" class="px-4 py-2 text-gray-300 hover:text-primary-400 hover:bg-dark-700 rounded transition-colors duration-300">Host de Discord Bots</a>
+          <a href="https://redebots.shop/index.php?rp=/login" class="btn-primary mx-4 mt-2">
+            <span class="relative z-10">Área do Cliente</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <section class="relative pt-32 pb-20">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="text-center" data-animate="fade-down">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-primary-500 rounded-full bg-primary-500/10 mb-4">
+          TERMOS DE SERVIÇO
+        </span>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
+          Conheça nossas <span class="gradient-text">Políticas</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base">
+          Termos de Serviço, Política de Privacidade e Política de Uso Aceitável da Rede Gamer, em conformidade com a LGPD.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs Section -->
+  <section class="py-20 relative">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="flex justify-center gap-4 mb-12 flex-wrap" data-animate="fade-down">
+        <button class="tab-btn active" data-tab="terms">Termos e Condições</button>
+        <button class="tab-btn" data-tab="privacy">Política de Privacidade</button>
+        <button class="tab-btn" data-tab="usage">Política de Uso Aceitável</button>
+      </div>
+      
+      <div id="terms" class="content-grid active">
+        <div class="card" data-animate="fade-up" data-animate-delay="100">
+          <i class="bx bx-wallet card-icon"></i>
+          <span class="card-number">01</span>
+          <div class="card-content">O pagamento integral ou parcial (conforme acordado) deve ser efetuado antes do início de qualquer serviço, seja hospedagem VPS, servidores dedicados, host de Minecraft ou Discord bots.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="150">
+          <i class="bx bx-ban card-icon"></i>
+          <span class="card-number">02</span>
+          <div class="card-content">Não há reembolso após o início dos serviços devido ao investimento de tempo, recursos e infraestrutura da Rede Gamer, exceto em casos de acordo prévio por escrito.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="200">
+          <i class="bx bx-edit card-icon"></i>
+          <span class="card-number">03</span>
+          <div class="card-content">O cliente tem direito a ajustes no serviço contratado, desde que dentro do escopo inicialmente acordado (VPS, servidores, Minecraft, bots).</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="250">
+          <i class="bx bx-transfer card-icon"></i>
+          <span class="card-number">04</span>
+          <div class="card-content">Mudanças no escopo do serviço após o início podem acarretar ajustes no prazo e/ou no valor final, a serem negociados e aprovados por ambas as partes.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="300">
+          <i class="bx bx-time card-icon"></i>
+          <span class="card-number">05</span>
+          <div class="card-content">Os prazos de ativação variam conforme o tipo de serviço e serão estipulados no contrato inicial.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="350">
+          <i class="bx bx-shield-alt-2 card-icon"></i>
+          <span class="card-number">06</span>
+          <div class="card-content">A Rede Gamer não se responsabiliza por mau uso, configuração inadequada ou alterações feitas pelo cliente em qualquer serviço contratado.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="400">
+          <i class="bx bx-copyright card-icon"></i>
+          <span class="card-number">07</span>
+          <div class="card-content">Os direitos autorais da infraestrutura e ferramentas fornecidas pertencem à Rede Gamer, salvo acordo expresso em contrário.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="450">
+          <i class="bx bx-key card-icon"></i>
+          <span class="card-number">08</span>
+          <div class="card-content">O cliente recebe licença de uso exclusivo do serviço após pagamento integral, sem direito a revenda ou redistribuição sem permissão.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="500">
+          <i class="bx bx-bell card-icon"></i>
+          <span class="card-number">09</span>
+          <div class="card-content">Alterações no escopo devem ser comunicadas em até 48 horas após o início do serviço, sob pena de custos adicionais.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="550">
+          <i class="bx bx-pause card-icon"></i>
+          <span class="card-number">10</span>
+          <div class="card-content">A Rede Gamer pode suspender ou cancelar o serviço em caso de atraso no pagamento ou falta de informações essenciais.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="600">
+          <i class="bx bx-info-circle card-icon"></i>
+          <span class="card-number">11</span>
+          <div class="card-content">O cliente deve fornecer todos os dados e materiais necessários no prazo estipulado, sob risco de atrasos.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="650">
+          <i class="bx bx-plug card-icon"></i>
+          <span class="card-number">12</span>
+          <div class="card-content">A Rede Gamer não se responsabiliza por falhas de terceiros (ex.: Discord, provedores) que afetem os serviços contratados.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="700">
+          <i class="bx bx-wrench card-icon"></i>
+          <span class="card-number">13</span>
+          <div class="card-content">Suporte técnico gratuito é oferecido por 30 dias após a ativação, cobrindo apenas problemas relacionados ao serviço original.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="750">
+          <i class="bx bx-dollar card-icon"></i>
+          <span class="card-number">14</span>
+          <div class="card-content">Suporte adicional após 30 dias ou fora do escopo original será cobrado separadamente.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="800">
+          <i class="bx bx-data card-icon"></i>
+          <span class="card-number">15</span>
+          <div class="card-content">A Rede Gamer não se responsabiliza por perda de dados causada por falhas do cliente em backups ou uso inadequado.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="850">
+          <i class="bx bx-check-circle card-icon"></i>
+          <span class="card-number">16</span>
+          <div class="card-content">O cliente deve garantir a veracidade de todas as informações fornecidas, isentando a Rede Gamer de erros decorrentes de dados incorretos.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="900">
+          <i class="bx bx-x-circle card-icon"></i>
+          <span class="card-number">17</span>
+          <div class="card-content">A Rede Gamer pode recusar ou cancelar serviços que violem leis, ética ou suas políticas internas.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="950">
+          <i class="bx bx-file card-icon"></i>
+          <span class="card-number">18</span>
+          <div class="card-content">O cliente receberá um relatório detalhado ao final da ativação do serviço, conforme o tipo de serviço.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="1000">
+          <i class="bx bx-refresh card-icon"></i>
+          <span class="card-number">19</span>
+          <div class="card-content">A Rede Gamer não garante compatibilidade futura com atualizações de plataformas de terceiros sem contrato de manutenção.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="1050">
+          <i class="bx bx-error card-icon"></i>
+          <span class="card-number">20</span>
+          <div class="card-content">Problemas técnicos devem ser reportados em até 7 dias após a ativação para suporte gratuito.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="1100">
+          <i class="bx bx-briefcase card-icon"></i>
+          <span class="card-number">21</span>
+          <div class="card-content">A Rede Gamer pode usar o serviço em seu portfólio, preservando a confidencialidade de dados sensíveis.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="1150">
+          <i class="bx bx-lock card-icon"></i>
+          <span class="card-number">22</span>
+          <div class="card-content">Dados confidenciais serão tratados conforme a LGPD e políticas de privacidade da Rede Gamer.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="1200">
+          <i class="bx bx-gavel card-icon"></i>
+          <span class="card-number">23</span>
+          <div class="card-content">Disputas serão resolvidas sob a jurisdição do foro da comarca da sede da Rede Gamer.</div>
+        </div>
+      </div>
+      
+      <div id="privacy" class="content-grid">
+        <div class="card" data-animate="fade-up" data-animate-delay="100">
+          <i class="bx bx-info-circle card-icon"></i>
+          <span class="card-number">01</span>
+          <div class="card-content">A Rede Gamer coleta dados pessoais (nome, e-mail, telefone, etc.) apenas para execução de serviços contratados (VPS, servidores, Minecraft, bots).</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="150">
+          <i class="bx bx-lock card-icon"></i>
+          <span class="card-number">02</span>
+          <div class="card-content">Dados são tratados com confidencialidade e protegidos conforme a LGPD (Lei nº 13.709/2018).</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="200">
+          <i class="bx bx-data card-icon"></i>
+          <span class="card-number">03</span>
+          <div class="card-content">Dados técnicos (logs, tokens, preferências) são coletados apenas quando necessários ao serviço.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="250">
+          <i class="bx bx-group card-icon"></i>
+          <span class="card-number">04</span>
+          <div class="card-content">Dados não são compartilhados com terceiros sem consentimento, exceto para execução do serviço (ex.: hospedagem).</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="300">
+          <i class="bx bx-check-circle card-icon"></i>
+          <span class="card-number">05</span>
+          <div class="card-content">O cliente pode solicitar acesso, correção, exclusão ou portabilidade de seus dados, conforme a LGPD.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="350">
+          <i class="bx bx-time card-icon"></i>
+          <span class="card-number">06</span>
+          <div class="card-content">Dados são retidos pelo tempo necessário ao contrato e obrigações legais, sendo eliminados após esse prazo.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="400">
+          <i class="bx bx-shield card-icon"></i>
+          <span class="card-number">07</span>
+          <div class="card-content">Tecnologias seguras (criptografia, firewalls) são usadas para proteger os dados.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="450">
+          <i class="bx bx-error card-icon"></i>
+          <span class="card-number">08</span>
+          <div class="card-content">Incidentes de segurança serão notificados ao cliente em até 72 horas, conforme a LGPD.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="500">
+          <i class="bx bx-cookie card-icon"></i>
+          <span class="card-number">09</span>
+          <div class="card-content">Sites podem usar cookies para melhorar a experiência, com aviso e consentimento conforme aplicável.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="550">
+          <i class="bx bx-user card-icon"></i>
+          <span class="card-number">10</span>
+          <div class="card-content">Dados sensíveis desnecessários não são coletados sem consentimento explícito.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="600">
+          <i class="bx bx-plug card-icon"></i>
+          <span class="card-number">11</span>
+          <div class="card-content">Dados processados por terceiros (ex.: Discord) seguem as políticas dessas plataformas.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="650">
+          <i class="bx bx-envelope card-icon"></i>
+          <span class="card-number">12</span>
+          <div class="card-content">Comunicações de marketing são opcionais e podem ser canceladas a qualquer momento.</div>
+        </div>
+      </div>
+      
+      <div id="usage" class="content-grid">
+        <div class="card" data-animate="fade-up" data-animate-delay="100">
+          <i class="bx bx-check-circle card-icon"></i>
+          <span class="card-number">01</span>
+          <div class="card-content">Os serviços da Rede Gamer devem ser usados apenas para fins legais e éticos, conforme as leis aplicáveis.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="150">
+          <i class="bx bx-ban card-icon"></i>
+          <span class="card-number">02</span>
+          <div class="card-content">É proibido usar os serviços para atividades ilegais, como hacking, spam, ou violação de direitos autorais.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="200">
+          <i class="bx bx-bot card-icon"></i>
+          <span class="card-number">03</span>
+          <div class="card-content">Bots Discord devem cumprir os Termos de Serviço do Discord e não podem ser usados para fins maliciosos.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="250">
+          <i class="bx bx-globe card-icon"></i>
+          <span class="card-number">04</span>
+          <div class="card-content">Servidores não devem hospedar conteúdo ofensivo, discriminatório ou ilegal.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="300">
+          <i class="bx bx-shield card-icon"></i>
+          <span class="card-number">05</span>
+          <div class="card-content">O cliente é responsável por manter a segurança de credenciais fornecidas (ex.: tokens, senhas).</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="350">
+          <i class="bx bx-x-circle card-icon"></i>
+          <span class="card-number">06</span>
+          <div class="card-content">A Rede Gamer pode suspender ou encerrar serviços em caso de uso indevido detectado.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="400">
+          <i class="bx bx-upload card-icon"></i>
+          <span class="card-number">07</span>
+          <div class="card-content">Conteúdo enviado pelo cliente deve estar livre de malwares ou elementos prejudiciais.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="450">
+          <i class="bx bx-tachometer card-icon"></i>
+          <span class="card-number">08</span>
+          <div class="card-content">O uso excessivo de recursos (ex.: VPS, bots) além do acordado pode ser restringido.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="500">
+          <i class="bx bx-comment-x card-icon"></i>
+          <span class="card-number">09</span>
+          <div class="card-content">É vedado o uso dos serviços para envio de spam ou comunicações não solicitadas.</div>
+        </div>
+        <div class="card" data-animate="fade-up" data-animate-delay="550">
+          <i class="bx bx-gavel card-icon"></i>
+          <span class="card-number">10</span>
+          <div class="card-content">Violações desta política podem resultar em ações legais, conforme a jurisdição aplicável.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 pt-16 pb-8 border-t border-dark-800">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
+        <div>
+          <div class="flex items-center mb-6">
+            <img src="https://i.imgur.com/1u7iCmD.png" alt="Rede Gamer Logo" loading="lazy" class="h-10 w-10 mr-3">
+            <span class="text-xl font-bold text-white font-heading">REDE GAMER</span>
+          </div>
+          <p class="text-gray-400 text-sm sm:text-base mb-6">Hospedagem gamer de alta performance com a melhor relação custo-benefício do mercado.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors duration-300" aria-label="Discord">
+              <i class='bx bxl-discord-alt text-2xl'></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors duration-300" aria-label="Twitter">
+              <i class='bx bxl-twitter text-2xl'></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors duration-300" aria-label="Instagram">
+              <i class='bx bxl-instagram text-2xl'></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Links Rápidos</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Home</a></li>
+            <li><a href="vps.html" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">VPS Gamer</a></li>
+            <li><a href="dedicados.html" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Servidores Dedicados</a></li>
+            <li><a href="minecraft.html" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Host de Minecraft</a></li>
+            <li><a href="discord_bots.html" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Host de Discord Bots</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Suporte</h3>
+          <ul class="space-y-3">
+            <li><a href="https://discord.gg/w4RhuhrBS2" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Central de Ajuda</a></li>
+            <li><a href="https://discord.gg/w4RhuhrBS2" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Status dos Serviços</a></li>
+            <li><a href="https://redebots.shop/index.php?rp=/login" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Área do Cliente</a></li>
+            <li><a href="termos.html" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Termos de Serviço</a></li>
+            <li><a href="termos.html#privacy" class="text-gray-400 hover:text-primary-500 transition-colors duration-300">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Contato</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center text-gray-400 text-sm sm:text-base">
+              <i class='bx bx-envelope mr-3 text-primary-500'></i>
+              <span>contato@redegamer.com.br</span>
+            </li>
+            <li class="flex items-center text-gray-400 text-sm sm:text-base">
+              <i class='bx bx-phone mr-3 text-primary-500'></i>
+              <span>+55 (11) 1234-5678</span>
+            </li>
+            <li class="flex items-center text-gray-400 text-sm sm:text-base">
+              <i class='bx bx-map mr-3 text-primary-500'></i>
+              <span>São Paulo, Brasil</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-dark-800 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 Rede Gamer. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Flutuante -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button id="chatbot-toggle" class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center text-white shadow-lg hover:bg-primary-600 transition-colors duration-300" aria-label="Abrir chatbot">
+      <i class='bx bx-message-rounded-dots text-2xl' id="chatbot-icon"></i>
+    </button>
+    
+    <div id="chatbot-window" class="absolute bottom-20 right-0 w-80 bg-dark-800 rounded-lg shadow-xl border border-dark-700 hidden" role="dialog" aria-labelledby="chatbot-title">
+      <div class="p-4 border-b border-dark-700 flex justify-between items-center">
+        <h3 class="text-white font-medium" id="chatbot-title">Suporte Rede Gamer</h3>
+        <button id="chatbot-close" class="text-gray-400 hover:text-white" aria-label="Fechar chatbot">
+          <i class='bx bx-x text-xl'></i>
+        </button>
+      </div>
+      <div class="p-4 h-64 overflow-y-auto" id="chatbot-messages">
+        <div class="flex mb-4">
+          <div class="w-8 h-8 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 mr-3">
+            <i class='bx bx-bot'></i>
+          </div>
+          <div class="bg-dark-700 rounded-lg px-4 py-2 text-sm text-gray-300 max-w-[80%]">
+            Olá! Sou o assistente virtual da Rede Gamer. Como posso te ajudar hoje?
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border-t border-dark-700">
+        <div class="flex">
+          <input type="text" placeholder="Digite sua mensagem..." class="flex-1 bg-dark-700 border border-dark-600 rounded-l-lg px-4 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary-500" aria-label="Digite sua mensagem">
+          <button class="bg-primary-500 hover:bg-primary-600 text-white px-4 rounded-r-lg transition-colors duration-300" aria-label="Enviar mensagem">
+            <i class='bx bx-send'></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicialização do Particles.js
+      if (typeof particlesJS !== 'undefined' && window.innerWidth > 640) {
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 60, density: { enable: true, value_area: 800 } },
+            color: { value: "#a855f7" },
+            shape: { type: "circle" },
+            opacity: { value: 0.4, random: true },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#7e22ce", opacity: 0.2, width: 1 },
+            move: { enable: true, speed: 1.5, direction: "none", random: true, straight: false, out_mode: "out" }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" }
+            }
+          }
+        });
+      }
+      
+      // Animação de scroll da navbar
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Menu mobile
+      const menuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      
+      menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('bx-menu');
+        menuIcon.classList.toggle('bx-x');
+      });
+      
+      // Chatbot
+      const chatbotToggle = document.getElementById('chatbot-toggle');
+      const chatbotWindow = document.getElementById('chatbot-window');
+      const chatbotClose = document.getElementById('chatbot-close');
+      const chatbotIcon = document.getElementById('chatbot-icon');
+      
+      chatbotToggle.addEventListener('click', function() {
+        chatbotWindow.classList.toggle('hidden');
+        chatbotIcon.classList.toggle('bx-message-rounded-dots');
+        chatbotIcon.classList.toggle('bx-x');
+      });
+      
+      chatbotClose.addEventListener('click', function() {
+        chatbotWindow.classList.add('hidden');
+        chatbotIcon.classList.remove('bx-x');
+        chatbotIcon.classList.add('bx-message-rounded-dots');
+      });
+      
+      // Animação de entrada
+      const animateElements = document.querySelectorAll('[data-animate]');
+      
+      const animateOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            animateOnScroll.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      animateElements.forEach(el => {
+        const delay = el.getAttribute('data-animate-delay') || '0';
+        el.style.transitionDelay = `${delay}ms`;
+        animateOnScroll.observe(el);
+      });
+      
+      // Tabs
+      const tabs = document.querySelectorAll('.tab-btn');
+      const contents = document.querySelectorAll('.content-grid');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          
+          tab.classList.add('active');
+          const tabId = tab.getAttribute('data-tab');
+          const activeContent = document.getElementById(tabId);
+          if (activeContent) {
+            activeContent.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
